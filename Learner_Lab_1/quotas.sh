@@ -1,0 +1,1 @@
+aws service-quotas list-service-quotas --service-code ec2 --query "Quotas[?contains(QuotaName,'T,')].{QuotaCode:QuotaCode,ServiceName:ServiceName,QuotaName:QuotaName,Value:Value}" --region us-east-1 --output table
